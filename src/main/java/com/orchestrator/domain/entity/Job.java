@@ -23,7 +23,7 @@ public class Job {
     @JoinColumn(name = "source_id", nullable = false)
     private Source source;
 
-    @Enumerated(EnumType.String)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private JobStatus status;
 

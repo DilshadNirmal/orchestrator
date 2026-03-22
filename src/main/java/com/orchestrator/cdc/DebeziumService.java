@@ -52,7 +52,7 @@ public class DebeziumService {
     }
 
     public void startCdc(Source source) {
-        if (runningEngines.containKey(source.getId())) {
+        if (runningEngines.containsKey(source.getId())) {
             log.warn("CDC already running for source: {}", source.getName());
             return;
         }
@@ -118,7 +118,7 @@ public class DebeziumService {
             if (payload.has("op")) {
                 String operation = payload.get("op").asText();
 
-                String externalId = extractId(payload);
+                String externalId = extractId(event);
 
                 Map<String, Object> data = extractData(payload, operation);
 
@@ -128,7 +128,7 @@ public class DebeziumService {
                 syncEvent.setOperation(operation);
                 syncEvent.setData(data);
                 syncEvent.setTimestamp(Instant.now());
-                syncEvent.setMetaData(Map.of(
+                syncEvent.setMetadata(Map.of(
                     "collection", extractCollection(event.key()),
                     "database", extractDatabase(event.key())
                 ));

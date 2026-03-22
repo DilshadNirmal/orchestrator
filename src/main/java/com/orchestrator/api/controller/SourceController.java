@@ -5,7 +5,7 @@ import com.orchestrator.api.dto.SourceResponse;
 import com.orchestrator.api.service.SourceService;
 import com.orchestrator.domain.entity.Source;
 import com.orchestrator.domain.repository.SourceRepository;
-import jakarta.validataion.Valid;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
