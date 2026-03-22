@@ -1,0 +1,41 @@
+# Compiled class files
+target/
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Build outputs
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.env
+
+# Secrets
+application-local.yml
+application-prod.yml
+credentials.json
+secrets/ 
+
+# Application runtime
+.debezium/
+*.dat
