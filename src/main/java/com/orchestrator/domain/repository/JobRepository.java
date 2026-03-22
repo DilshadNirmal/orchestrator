@@ -10,5 +10,6 @@ import java.util.UUID;
 
 @Repository
 public interface JobRepository extends JpaRepository<Job, UUID> {
+    Page<Job> findAllByOrderByStartedAtDesc(Pageable pageable);
     Page<Job> findBySourceIdOrderByStartedAtDesc(UUID sourceId, Pageable pageable);
 }
