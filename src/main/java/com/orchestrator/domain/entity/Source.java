@@ -11,16 +11,16 @@ import java.util.Map;
 import java.util.UUID;
 
 @Entity
-@TABLE(name = "sources")
+@Table(name = "sources")
 @Getter
 @Setter
-@NoArgsContructor
-@ALLArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Source {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUDI id;
+    private UUID id;
 
     @Column(nullable = false)
     private String name;
@@ -38,7 +38,7 @@ public class Source {
 
     @Column(nullable = false)
     @Builder.Default
-    private Boolean enabled = false
+    private Boolean enabled = false;
 
     @Column(name = "cdc_active")
     @Builder.Default

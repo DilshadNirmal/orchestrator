@@ -12,6 +12,10 @@ mvnw.cmd
 .vscode/
 *.swp
 *.swo
+.classpath
+.factorypath
+.project
+.settings/
 
 # Build outputs
 build/
